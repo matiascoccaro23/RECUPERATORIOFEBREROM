@@ -2,7 +2,7 @@
 
 namespace PoligonoRegularApp
 {
-    // Enumeración Color
+   
     public enum Color
     {
         Blanco = 1,
@@ -12,7 +12,7 @@ namespace PoligonoRegularApp
         Negro
     }
 
-    // Enumeración Material
+    
     public enum Material
     {
         Plástico = 1,
@@ -20,7 +20,7 @@ namespace PoligonoRegularApp
         Bronce
     }
 
-    // Clase PoligonoRegular
+    
     public class PoligonoRegular
     {
         // Atributos
@@ -29,7 +29,7 @@ namespace PoligonoRegularApp
         public Color Color { get; set; }
         public Material Material { get; set; }
 
-        // Constructor
+      
         public PoligonoRegular(double lado, int cantidadLados, Color color, Material material)
         {
             if (cantidadLados < 5 || cantidadLados > 7)
@@ -41,19 +41,19 @@ namespace PoligonoRegularApp
             Material = material;
         }
 
-        // Método público para calcular el perímetro
+       
         public double CalcularPerimetro()
         {
             return Lado * CantidadLados;
         }
 
-        // Método privado para calcular la apotema
+      
         private double CalcularApotema()
         {
             return Lado / (2 * Math.Tan(Math.PI / CantidadLados));
         }
 
-        // Método público para calcular el área
+      
         public double CalcularArea()
         {
             double perimetro = CalcularPerimetro();
@@ -61,7 +61,7 @@ namespace PoligonoRegularApp
             return (perimetro * apotema) / 2;
         }
 
-        // Método para informar el tipo de polígono
+      
         public string TipoDePoligono()
         {
             return CantidadLados switch
@@ -73,7 +73,7 @@ namespace PoligonoRegularApp
             };
         }
 
-        // Método para mostrar todos los datos del polígono
+        
         public void MostrarDatos()
         {
             Console.WriteLine($"Lado: {Lado}");
