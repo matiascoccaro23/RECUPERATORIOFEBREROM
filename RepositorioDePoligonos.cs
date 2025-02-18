@@ -13,10 +13,10 @@ namespace PoligonoRegularApp
             listaPoligonos = new List<PoligonoRegular>();
         }
 
-        // Propiedad para obtener la cantidad de polígonos almacenados
+        
         public int Cantidad => listaPoligonos.Count;
 
-        // Método para verificar si un polígono ya está en la lista
+       
         public bool PoligonoRepetido(PoligonoRegular poligono)
         {
             return listaPoligonos.Any(p =>
@@ -26,7 +26,7 @@ namespace PoligonoRegularApp
                 p.Material == poligono.Material);
         }
 
-        // Método para agregar un polígono si no está repetido
+     
         public void AgregarPoligono(PoligonoRegular poligono)
         {
             if (!PoligonoRepetido(poligono))
@@ -39,7 +39,7 @@ namespace PoligonoRegularApp
             }
         }
 
-        // Método para obtener la lista completa de polígonos
+        
         public List<PoligonoRegular> ObtenerLista()
         {
             return listaPoligonos;
